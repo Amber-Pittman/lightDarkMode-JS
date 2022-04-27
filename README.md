@@ -8,3 +8,9 @@
 [Hero Patterns](https://heropatterns.com/)
 
 [Undraw Illustrations](https://undraw.co/illustrations)
+
+[How TO - Toggle Switch](https://www.w3schools.com/howto/howto_css_switch.asp)
+
+[onChange Event](https://www.w3schools.com/jsref/event_onchange.asp)
+
+[documentElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/documentElement)
