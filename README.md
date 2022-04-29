@@ -1,4 +1,5 @@
 # Light/Dark Mode
+### [AmberPittman.com](http://amberpittman.com/)
 
 ## Resources
 [The Ultimate Guide on Designing a Dark Theme for your Android app](https://blog.prototypr.io/how-to-design-a-dark-theme-for-your-android-app-3daeb264637)
