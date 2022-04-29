@@ -14,3 +14,5 @@
 [onChange Event](https://www.w3schools.com/jsref/event_onchange.asp)
 
 [documentElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/documentElement)
+
+[localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
