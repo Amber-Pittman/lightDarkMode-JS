@@ -13,22 +13,13 @@ function imageMode(color) {
     image3.src = `img/undraw_conceptual_idea_${color}.svg`;
 }
 
-// Dark Mode Styles
-function darkMode() {
-    nav.style.backgroundColor = 'rgb(0 0 0 / 50%)';
-    textBox.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-    toggleIcon.children[0].textContent = 'Dark Mode';
-    toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon'); 
-    imageMode('dark');  
-}
-
-// Light Mode Styles
-function lightMode() {
-    nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-    textBox.style.backgroundColor = 'rgb(0 0 0) / 50%)';
-    toggleIcon.children[0].textContent = 'Light Mode';
-    toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
-    imageMode('light');
+// Toggle between Modes
+function toggleDarkLightMode(isItDark) {
+    nav.style.backgroundColor = isItDark ? 'rgb(0 0 0 / 50%)' : 'rgb(255 255 255 / 50%)';
+    textBox.style.backgroundColor = isItDark ? 'rgb(255 255 255 / 50%)' : 'rgb(0 0 0 / 50%)';
+    toggleIcon.children[0].textContent = isItDark ? 'Dark Mode' : 'Light Mode';
+    isItDark ? toggleIcon.children[1].classList.replace('fa-sun', 'fa-moon') : toggleIcon.children[1].classList.replace('fa-moon', 'fa-sun');
+    isItDark ? imageMode('dark') : imageMode('light');
 }
 
 // Dynamically Switch Theme
@@ -36,11 +27,11 @@ function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark')
-        darkMode();
+        toggleDarkLightMode(true);
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light')
-        lightMode();
+        toggleDarkLightMode(false);
     }
     console.log(e.target.checked);
 }
@@ -55,6 +46,6 @@ if (currentTheme) {
 
     if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
-        darkMode();
+        toggleDarkLightMode(true);
     }
 }
